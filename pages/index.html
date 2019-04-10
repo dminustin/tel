@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="images/bootstrap.min.css" >
+    <link rel="stylesheet" href="images/bootstrap-slider.css" >
+    <script src="images/jquery.min.js"></script>
+    <script src="images/tether.min.js"></script>
+    <script src="images/bootstrap.min.js"></script>
+    <script src="images/bootstrap-slider.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <ul class="nav nav-tabs|pills">
+        <li class="nav-item">
+            <a href="/" class="nav-link active">Main</a>
+        </li>
+        <li class="nav-item">
+            <a href="/phonebook" class="nav-link">Phonebook</a>
+        </li>
+        <li class="nav-item">
+            <a href="/password" class="nav-link">Password</a>
+        </li>
+        <li class="nav-item">
+            <a href="/calls" class="nav-link">Calls Log</a>
+        </li>
+        <li class="nav-item">
+            <a href="/updates" class="nav-link">Updates</a>
+        </li>
+
+
+    </ul>
+
+    <br> <br>
+    <div class="row">
+        <legend>Main settings</legend>
+    </div>
+
+    <div class="row">
+        <div class="col col-3">Master Volume</div>
+        <div class="col col-9"><input id="input" /></div>
+    </div>
+
+    <div class="row">
+        <div class="col col-12"><hr></div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">Panel with panel-primary class</div>
+        <div class="panel-body">Panel Content</div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Suggestions</h6>
+
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+            Enabled
+        </label>
+
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">WiFi CSID</small>
+        </div>
+        <div class="form-group">
+            <label for=""></label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">WiFi Password</small>
+        </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>
+    $("#input").slider({
+
+        // the id of the slider element
+        id: "",
+
+        // minimum value
+        min: 0,
+
+        // maximum value
+        max: 10,
+
+        // increment step
+        step: 1,
+
+        // the number of digits shown after the decimal.
+        precision: 0,
+
+        // 'horizontal' or 'vertical'
+        orientation: 'horizontal',
+
+        // initial value
+        value: 5,
+
+        // enable range slider
+        range: false,
+
+        // selection placement.
+        // 'before', 'after' or 'none'.
+        // in case of a range slider, the selection will be placed between the handles
+        selection: 'before',
+
+        // 'show', 'hide', or 'always'
+        tooltip: 'show',
+
+        // show two tooltips one for each handler
+        tooltip_split: false,
+
+        // 'round', 'square', 'triangle' or 'custom'
+        handle: 'round',
+
+        // whether or not the slider should be reversed
+        reversed: false,
+
+        // whether or not the slider is initially enabled
+        enabled: true,
+
+        // callback
+        formatter: function formatter(val) {
+            if (Array.isArray(val)) {
+                return val[0] + " : " + val[1];
+            } else {
+                return val;
+            }
+        },
+
+        // The natural order is used for the arrow keys.
+        // Arrow up select the upper slider value for vertical sliders, arrow right the righter slider value for a horizontal slider - no matter if the slider was reversed or not.
+        // By default the arrow keys are oriented by arrow up/right to the higher slider value, arrow down/left to the lower slider value.
+        natural_arrow_keys: false,
+
+        // Used to define the values of ticks.
+        // Tick marks are indicators to denote special values in the range.
+        // This option overwrites min and max options.
+        ticks: [],
+
+        // Defines the positions of the tick values in percentages.
+        // The first value should always be 0, the last value should always be 100 percent.
+        ticks_positions: [],
+
+        // Defines the labels below the tick marks. Accepts HTML input.
+        ticks_labels: [],
+
+        // Used to define the snap bounds of a tick.
+        // Snaps to the tick if value is within these bounds.
+        ticks_snap_bounds: 0,
+
+        // Used to allow for a user to hover over a given tick to see it's value.
+        ticks_tooltip: false,
+
+        // Position of tooltip, relative to slider.
+        // Accepts 'top'/'bottom' for horizontal sliders and 'left'/'right' for vertically orientated sliders.
+        // Default positions are 'top' for horizontal and 'right' for vertical slider.
+        tooltip_position: null,
+
+        // Set to 'logarithmic' to use a logarithmic scale.
+        scale: 'linear',
+
+        // Focus the appropriate slider handle after a value change.
+        focus: false,
+
+        // ARIA labels for the slider handle's, Use array for multiple values in a range slider.
+        labelledby: null,
+
+        // Defines a range array that you want to highlight
+        rangeHighlights: []
+
+    });
+</script>
+</body>
+</html>
